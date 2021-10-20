@@ -12,7 +12,7 @@ import timber.log.Timber
 
 class InventoriesViewModel @ViewModelInject constructor(
     private val inventoryRepository: InventoryRepository,
-    private val dispatcherProvider: DispatcherProvider
+        private val dispatcherProvider: DispatcherProvider
 ) : ViewModel(), LifecycleObserver {
 
     //  val isLoading = MutableLiveData(false)

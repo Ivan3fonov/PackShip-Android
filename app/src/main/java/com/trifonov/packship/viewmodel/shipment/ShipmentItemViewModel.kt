@@ -30,9 +30,10 @@ class ShipmentItemViewModel(private val onShipmentClicked: SingleLiveEvent<Strin
         shipment.value = item
     }
 
-    fun onItemClicked() {
+    fun onContainerClicked() {
         shipment.value?.let {
             onShipmentClicked.value = it.identity
         }
     }
+
 }

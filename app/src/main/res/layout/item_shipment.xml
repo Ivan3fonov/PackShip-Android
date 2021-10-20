@@ -14,8 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="108dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_inventory_item"
-        android:onClick="@{() -> viewModel.onItemClicked()}">
+        android:background="@drawable/bg_inventory_item">
 
         <ImageView
             android:id="@+id/img_status"
@@ -73,12 +72,16 @@
             app:layout_constraintTop_toTopOf="@id/txt_expenses"
             tools:text="600" />
 
-        <TextView
+        <ImageView
             android:id="@+id/txt_packed_containers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:stateListAnimator="@animator/test_anim"
             android:layout_marginEnd="6dp"
-            android:text="@string/packed_containers"
+            android:onClick="@{() -> viewModel.onContainerClicked()}"
+            android:src="@drawable/ic_container"
             app:layout_constraintBottom_toBottomOf="@id/txt_packed_containers_value"
             app:layout_constraintEnd_toStartOf="@id/txt_packed_containers_value"
             app:layout_constraintTop_toTopOf="@id/txt_packed_containers_value" />
@@ -94,15 +97,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_status"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
             tools:text="25" />
 
-        <TextView
+        <ImageView
             android:id="@+id/txt_assignments"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginEnd="6dp"
-            android:text="@string/assignments"
+            android:src="@drawable/ic_assignment"
             app:layout_constraintBottom_toBottomOf="@id/txt_assignments_value"
             app:layout_constraintEnd_toStartOf="@id/txt_assignments_value"
             app:layout_constraintTop_toTopOf="@id/txt_assignments_value" />

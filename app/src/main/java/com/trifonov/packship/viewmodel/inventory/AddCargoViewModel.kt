@@ -55,7 +55,7 @@ class AddCargoViewModel @ViewModelInject constructor(
                         back.call()
                     }
                     is PackShipResponse.Error -> {
-                        Timber.i(response.message)
+                        Timber.e(response.message)
                     }
                 }
             }
